@@ -1,0 +1,677 @@
+/*=================================================================================*/
+/*=================================================================================*/
+/*==========================||---------------------------||========================*/
+/*==========================|| DESIGNED BY  HOSSAM HILAL ||========================*/
+/*==========================||---------------------------||========================*/
+/*====================================||------||===================================*/
+/*====================================|| 2022 ||===================================*/
+/*====================================||------||===================================*/
+/*=================================================================================*/
+/*=================================================================================*/
+
+
+/* fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+
+
+:root {
+    --primaryColor: #eb9856;
+    --white: #ffffff;
+    --text: #333;
+    --grey: #F7F9FC;
+    --blue: #0078D2;
+    --blue-dark: #0657a9;
+}
+
+
+/**** Init ****/
+body {
+    font-family: 'Almarai', sans-serif;
+    overflow-x: hidden;
+    direction: rtl;
+    text-align: right;
+}
+
+.stopScroll {
+    overflow: hidden;
+}
+
+.secPadding {
+    padding: 80px 0;
+}
+
+p {
+    color: var(--text);
+    margin: 0;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+button:focus,
+button:active,
+input:active,
+input:focus,
+select:active,
+select:focus,
+textarea:focus,
+textarea:active {
+    box-shadow: none;
+    outline: 0;
+}
+
+/*==========================||---------------------------||========================*/
+/*==========================||         Container         ||========================*/
+/*==========================||---------------------------||========================*/
+
+@media (min-width: 1300px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1300px;
+    }
+}
+
+/*==========================||---------------------------||========================*/
+/*==========================||           HEADER          ||========================*/
+/*==========================||---------------------------||========================*/
+
+.headerTop {
+    padding: 15px;
+}
+
+.flexBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerTop a {
+    color: var(--text);
+    font-weight: 600;
+    font-size: 17px;
+    transition: all .4s ease-in-out;
+}
+
+.headerTop a:hover {
+    color: var(--primaryColor);
+}
+
+.siteLinks {
+    display: flex;
+}
+
+.header .call {
+    margin-inline-end: 25px;
+}
+
+.header .logo {
+    max-width: 260px;
+}
+
+.headerBottom {
+    background: var(--primaryColor);
+    padding: 10px 0;
+}
+
+.navMenu a {
+    color: var(--white);
+    font-weight: 700;
+    margin-inline-end: 15px;
+    padding: 7px;
+    display: inline-flex;
+    border-radius: 5px;
+    transition: all .4s ease-in-out;
+}
+
+.navMenu a:hover {
+    background: rgb(239 139 59);
+    color: var(--white);
+}
+
+.results {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--white);
+    border-radius: 5px;
+    padding: 5px 15px;
+    color: var(--white);
+    font-weight: 600;
+    margin-inline-start: 15px;
+    transition: all .4s ease-in-out;
+}
+
+.results:hover {
+    background: rgb(239 139 59);
+    color: var(--white);
+}
+
+.openSearch {
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: var(--white);
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.openSearch:hover {
+    color: #853c02;
+}
+
+
+
+
+/*==========================||---------------------------||========================*/
+/*==========================||       home slider         ||========================*/
+/*==========================||---------------------------||========================*/
+
+.homeSlider {
+    position: relative;
+}
+
+.homeSlider img {
+    height: 500px;
+}
+
+.homeSlider .item a {
+    position: absolute;
+    bottom: 70px;
+    left: calc(50% - 80px);
+    width: 160px;
+    padding: 8px 0;
+    color: var(--text);
+    font-weight: 900;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--text);
+    border-radius: 10px;
+    margin: auto;
+    transition: all .4s ease-in-out;
+}
+
+.homeSlider .item a:hover {
+    background: var(--primaryColor);
+}
+
+.homeSlider .owl-nav {
+    position: absolute;
+    top: calc(50% - 47px);
+    left: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 14%);
+}
+
+.homeSlider .owl-nav>div {
+    font-size: 63px;
+}
+
+.homeSlider .owl-nav>div:hover {
+    color: var(--primaryColor);
+}
+
+.homeSlider .owl-dots {
+    display: flex;
+    position: absolute;
+    bottom: 30px;
+    justify-content: center;
+    width: 100%;
+}
+
+.homeSlider .owl-dot {
+    width: 10px;
+    height: 10px;
+    background: var(--text);
+    border-radius: 50%;
+    margin: 0 3px;
+}
+
+.homeSlider .owl-dot.active {
+    background: var(--primaryColor);
+}
+
+.social {
+    position: fixed;
+    top: calc(50% - 100px);
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 1;
+}
+
+.social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: var(--white);
+    transition: all .4s ease-in-out;
+}
+
+.facebook {
+    background: #1877F2;
+}
+
+.twitter {
+    background: #1DA1F2;
+}
+
+.instagram {
+    background: #FF0084;
+}
+
+.youtube {
+    background: #CD201F;
+}
+
+.social a:hover {
+    width: 70px;
+}
+
+/*==========================||---------------------------||========================*/
+/*==========================||           Services        ||========================*/
+/*==========================||---------------------------||========================*/
+
+.grey {
+    background: var(--grey);
+}
+
+.secHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.secHeader h2 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.secHeader a {
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 600;
+    transition: all .4s ease-in-out;
+}
+
+.secHeader a:hover {
+    color: var(--primaryColor);
+}
+
+.service {
+    background: var(--white);
+    cursor: pointer;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 5px 15px rgb(35 101 154 / 7%);
+    transition: all .5s ease-in-out;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px rgb(35 101 154 / 12%);
+}
+
+.service .data {
+    padding: 25px;
+}
+
+.service h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.service h5 {
+    font-size: 17px;
+    margin: 0;
+}
+
+/*==========================||---------------------------||========================*/
+/*==========================||           Article         ||========================*/
+/*==========================||---------------------------||========================*/
+
+.secPaddingSm {
+    padding: 50px 0;
+}
+
+.articleContent {
+    margin-bottom: 20px;
+    max-width: 470px;
+}
+
+.articleContent h2 {
+    font-size: 44px;
+    margin-bottom: 30px;
+    font-weight: 900;
+}
+
+.articleContent p {
+    font-size: 20px;
+    margin-bottom: 80px;
+    line-height: 1.7;
+}
+
+.bookingBtn {
+    background: var(--blue);
+    color: var(--white);
+    width: 140px;
+    height: 45px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.bookingBtn:hover {
+    background: var(--blue-dark);
+    color: var(--white);
+}
+
+.bookingBtn span {
+    margin-inline-end: 20px;
+}
+
+/*==========================||---------------------------||========================*/
+/*==========================||            Apps           ||========================*/
+/*==========================||---------------------------||========================*/
+
+.apps h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.apps p {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.appsVector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.appsVector img {
+    max-height: 400px;
+}
+
+.appsContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.downloads {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.download {
+    color: var(--white);
+    background: #000;
+    display: flex;
+    align-items: center;
+    padding: 5px 12px;
+    border-radius: 10px;
+    transition: all .5s ease-in-out;
+}
+
+.download .icon {
+    margin-inline-start: 10px;
+}
+
+.download img {
+    max-width: 25px;
+}
+
+.download .data {
+    text-align: end;
+}
+
+.download h5 {
+    text-transform: uppercase;
+    font-size: 9px;
+    margin-bottom: 4px;
+}
+
+.download h6 {
+    font-size: 17px;
+    margin: 0;
+}
+
+.download:first-of-type {
+    margin-inline-end: 20px;
+}
+
+.download:hover {
+    color: var(--white);
+    background: var(--primaryColor);
+}
+
+/*==========================||---------------------------||========================*/
+/*==========================||            Footer         ||========================*/
+/*==========================||---------------------------||========================*/
+
+.footerTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.footer a {
+    color: var(--text);
+}
+
+.menu a {
+    font-weight: 700;
+    margin-inline-end: 15px;
+    display: inline-flex;
+    transition: all .4s ease-in-out;
+}
+
+.menu a:hover {
+    color: var(--primaryColor);
+}
+
+.follow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.follow a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--grey);
+    border-radius: 50%;
+    margin-inline-start: 10px;
+    transition: all .4s ease-in-out;
+}
+
+.follow a:hover {
+    background: var(--primaryColor);
+    color: var(--white);
+}
+
+.footerBottom .row {
+    align-items: center;
+}
+
+.footerBottom p {
+    font-weight: 600;
+}
+
+.footerInfo {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.hotLine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-inline-start: 25px;
+}
+
+.hotLine label {
+    font-weight: 600;
+    font-size: 19px;
+}
+
+.hotLine a {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.up {
+    width: 50px;
+    height: 55px;
+    background: var(--white);
+    color: var(--text);
+    box-shadow: 1px 3px 5px 0px rgb(0 0 0 / 20%);
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 36px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.up.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.up:hover {
+    background: var(--primaryColor);
+    color: var(--white);
+}
+
+
+/*==========================||---------------------------||========================*/
+/*==========================||          Volunteer        ||========================*/
+/*==========================||---------------------------||========================*/
+
+
+/*==========================||---------------------------||========================*/
+/*==========================||           Partners        ||========================*/
+/*==========================||---------------------------||========================*/
+
+
+
+/*==========================||---------------------------||========================*/
+/*==========================||          Subscribe        ||========================*/
+/*==========================||---------------------------||========================*/
+
+
+
+/*==========================||---------------------------||========================*/
+/*==========================||           Clients         ||========================*/
+/*==========================||---------------------------||========================*/
+
+
+
+/*==========================||---------------------------||========================*/
+/*==========================||            FOOTER         ||========================*/
+/*==========================||---------------------------||========================*/
+
+
+
+/*==========================||---------------------------||========================*/
+/*==========================||        Internal Heade     ||========================*/
+/*==========================||---------------------------||========================*/
+
+
+
+
+/*==========================||---------------------------||========================*/
+/*==========================||          About Page       ||========================*/
+/*==========================||---------------------------||========================*/
+
+
+
+/*==========================||---------------------------||========================*/
+/*==========================||         Events Page       ||========================*/
+/*==========================||---------------------------||========================*/
+
+
+
+
+/*==========================||---------------------------||========================*/
+/*==========================||       Corporate Page      ||========================*/
+/*==========================||---------------------------||========================*/
+
+
+
+/*==========================||---------------------------||========================*/
+/*==========================||       Wellness Ideas      ||========================*/
+/*==========================||---------------------------||========================*/
+
+
+
+/*==========================||---------------------------||========================*/
+/*==========================||          Careers          ||========================*/
+/*==========================||---------------------------||========================*/
+
+
+
+/*==========================||---------------------------||========================*/
+/*==========================||          Volunteer        ||========================*/
+/*==========================||---------------------------||========================*/
+
+
+/*==========================||---------------------------||========================*/
+/*==========================||        Sponsorships       ||========================*/
+/*==========================||---------------------------||========================*/
+
+
+
+/*==========================||---------------------------||========================*/
+/*==========================||            AR             ||========================*/
+/*==========================||---------------------------||========================*/
+
+
+
+
+/*==========================||---------------------------||========================*/
+/*==========================||            Loader        ||========================*/
+/*==========================||---------------------------||========================*/
