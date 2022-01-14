@@ -10,21 +10,28 @@
     //     }); 
     // });
 
-    // // OPEN SIDE  MENU 
-    // $('.menuBtn').on('click', function(){
-    //     $('.navMenu').toggleClass('show');
-    //     $('.navOverlay').addClass('show');  
-    //     setTimeout(function(){
-    //         $('body').addClass('stopScroll');
-    //     }, 200); 
-    // });
+    // OPEN SIDE  MENU 
+    $('.menuBtn').on('click', function(){
+        $('.sideNav').toggleClass('show');
+        $('.bodyOverlay').addClass('show');  
+        setTimeout(function(){
+            $('body').addClass('stopScroll');
+        }, 200); 
+    });
 
-    // CLOSE SIDE MENU 
-    // $('.navOverlay').on('click', function(){
-    //     $(this).removeClass('show');
-    //     $('.navMenu').removeClass('show');  
-    //     $('body').removeClass('stopScroll');  
-    // });
+    // Close Side Menu By Overlay
+    $('.bodyOverlay').on('click', function(){
+        $(this).removeClass('show');
+        $('.sideNav').removeClass('show');  
+        $('body').removeClass('stopScroll');  
+    });
+
+    // Close Side Menu By Close Icon
+    $('.closeMenu').on('click', function(){
+        $('.bodyOverlay').removeClass('show');
+        $('.sideNav').removeClass('show');  
+        $('body').removeClass('stopScroll');  
+    });
 
     // //  Open DropDown
     // $('.dropToggle').on('click', function(e){
@@ -72,6 +79,61 @@
         }
     });
 
+    // Analysis OWL 
+    $('.owlAnalysis').owlCarousel({
+        rtl: true,
+        margin: 0,
+        autoplay: true,
+        loop: false,
+        nav: false,
+        dots: true,
+        autoplaySpeed : 5000,
+        autoplayTimeout : 5000,
+        smartSpeed: 5000 ,
+        navText: ["<i class='icofont-simple-right'></i>", "<i class='icofont-simple-left'></i>"],
+        responsive: {
+            0: {
+                items: 1,
+                dotsEach: 1
+            },
+            600: {
+                items: 1,
+                dotsEach: 1
+            },
+            1000: {
+                items: 1,
+                dotsEach: 1
+            }
+        }
+    });
+
+    // Water OWL 
+    $('.owlWater').owlCarousel({
+        rtl: true,
+        margin: 0,
+        autoplay: true,
+        loop: false,
+        nav: false,
+        dots: true,
+        autoplaySpeed : 5000,
+        autoplayTimeout : 5000,
+        smartSpeed: 5000 ,
+        navText: ["<i class='icofont-simple-right'></i>", "<i class='icofont-simple-left'></i>"],
+        responsive: {
+            0: {
+                items: 1,
+                dotsEach: 1
+            },
+            600: {
+                items: 1,
+                dotsEach: 1
+            },
+            1000: {
+                items: 1,
+                dotsEach: 1
+            }
+        }
+    });
 
     // Show / Hide Scroll Button 
     $(window).scroll( function(){
