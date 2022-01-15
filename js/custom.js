@@ -2,6 +2,7 @@
 (function($) {
     "use strict";
 
+    // Loader 
     $(window).on('load', function(){
         $('body').addClass('stopScroll');
         $('.loader').fadeOut(500, function () {
@@ -32,6 +33,33 @@
         $('.sideNav').removeClass('show');  
         $('body').removeClass('stopScroll');  
     });
+
+    // Sticky Nav 
+    var w = document.documentElement.clientWidth || window.innerWidth;
+    if (w >= 992) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+              document.getElementById('headerBottom').classList.add('sticky');
+              document.body.style.paddingTop = '86px';
+            } else {
+              document.getElementById('headerBottom').classList.remove('sticky');
+               // remove padding top from body
+              document.body.style.paddingTop = '0';
+            } 
+        });
+    } else {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+              document.getElementById('mobileHeader').classList.add('stickyMobile');
+              document.body.style.paddingTop = '48px';
+            } else {
+              document.getElementById('mobileHeader').classList.remove('stickyMobile');
+               // remove padding top from body
+              document.body.style.paddingTop = '0';
+            } 
+        });
+    }
+    
 
     // Check if Rtl 
     var rtlVal = true ;   
@@ -165,6 +193,23 @@
     $('button[type="reset"]').on('click' , function(){
         $('.field').removeClass('focused');
     });
+
+
+    // Display Supp Box Content
+    $('.supBox').on('click' , function(){
+        let Description = $(this).find('h4').text();
+        $('#displyed').text(Description);
+    });
+
+    // Drop Down
+    $('.dropDown').on('click' , function(){
+        $(this).find('ul').toggle();
+    });
+    
+    
+
+    // WOW Init
+    new WOW().init();
    
 })(jQuery);
 
