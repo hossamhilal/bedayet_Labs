@@ -2,13 +2,13 @@
 (function($) {
     "use strict";
 
-    // $(window).on('load', function(){
-    //     $('body').addClass('stopScroll');
-    //     $('.loader').fadeOut(500, function () {
-    //         $(this).remove();
-    //         $('body').removeClass('stopScroll');
-    //     }); 
-    // });
+    $(window).on('load', function(){
+        $('body').addClass('stopScroll');
+        $('.loader').fadeOut(500, function () {
+            $(this).remove();
+            $('body').removeClass('stopScroll');
+        }); 
+    });
 
     // OPEN SIDE  MENU 
     $('.menuBtn').on('click', function(){
@@ -33,27 +33,14 @@
         $('body').removeClass('stopScroll');  
     });
 
-    // //  Open DropDown
-    // $('.dropToggle').on('click', function(e){
-    //     e.preventDefault();
-    //     e.stopPropagation();
-    //     if($(this).next('.dropDown').hasClass('open')){
-    //         $('.dropDown').removeClass('open');
-    //     } else {
-    //         $('.dropDown').removeClass('open');
-    //         $(this).next('.dropDown').toggleClass('open');
-    //     } 
-    // });
-
-    //  Close DropDown
-    // $(document).on('click', function(){
-    //     $('.dropDown').removeClass('open');
-    // });
+    // Check if Rtl 
+    var rtlVal = true ;   
+    $('body').hasClass('en') ? rtlVal = false : rtlVal = true;
 
     
     // Header OWL 
     $('.owlHome').owlCarousel({
-        rtl: true,
+        rtl: rtlVal,
         margin: 0,
         autoplay: true,
         loop: true,
@@ -81,7 +68,7 @@
 
     // Analysis OWL 
     $('.owlAnalysis').owlCarousel({
-        rtl: true,
+        rtl: rtlVal,
         margin: 0,
         autoplay: true,
         loop: false,
@@ -109,7 +96,7 @@
 
     // Water OWL 
     $('.owlWater').owlCarousel({
-        rtl: true,
+        rtl: rtlVal,
         margin: 0,
         autoplay: true,
         loop: false,
@@ -153,114 +140,31 @@
         }, 2000);
     });
 
-    // $('.owlHeader .owl-dot').each(function () {
-    //     $(this).children('span').text('0' + ($(this).index() + 1));
-    // });   
-    // owlHeader.on('mousewheel', '.owl-stage', function (e) {
-    //     if (e.deltaY > 0) {
-    //         owlHeader.trigger('next.owl');
-    //     } else {
-    //         owlHeader.trigger('prev.owl');
-    //     }
-    //     e.preventDefault();
-    // });
+    // Open Certificate 
+    $('.showCertificate').on('click', function(){
+        let src = $(this).data('src');
+        console.log('src' , src)
+        $('#certificateImg').attr('src' , src);
+    });
 
-    // Testimonials OWL 
-    // $('.owlTestimonials').owlCarousel({
-    //     margin: 20,
-    //     autoplay: true,
-    //     loop: false,
-    //     nav: true,
-    //     dots: false,
-    //     center : false ,
-    //     autoplaySpeed : 5000,
-    //     autoplayTimeout : 5000,
-    //     smartSpeed: 5000 ,
-    //     navText: ["<i class='icofont-thin-right'></i>", "<i class='icofont-thin-left'></i>"],
-    //     responsive: {
-    //         0: {
-    //             items: 1
-    //         },
-    //         600: {
-    //             items: 2
-    //         },
-    //         1000: {
-    //             items: 2
-    //         }
-    //     }
-    // });
+    // INPUT ANIMATION 
+    $('.filedInput').each(function() { 
+        if ($(this).val() != "") {
+            $(this).parent('.field').addClass('focused');   
+        }
+    });
 
-    // Partners OWL 
-    // $('.owlPartners').owlCarousel({
-    //     margin: 20,
-    //     autoplay: true,
-    //     loop: true,
-    //     nav: false,
-    //     dots: false,
-    //     center : false ,
-    //     autoplaySpeed : 5000,
-    //     autoplayTimeout : 5000,
-    //     smartSpeed: 5000 ,
-    //     navText: ["<i class='icofont-thin-right'></i>", "<i class='icofont-thin-left'></i>"],
-    //     responsive: {
-    //         0: {
-    //             items: 1
-    //         },
-    //         600: {
-    //             items: 3
-    //         },
-    //         1000: {
-    //             items: 4
-    //         }
-    //     }
-    // });
+    $('.filedInput').focus(function(){
+        $(this).parent().addClass('focused');
+    });
 
-    // Clients OWL 
-    // $('.owlClients').owlCarousel({
-    //     margin: 20,
-    //     autoplay: true,
-    //     loop: true,
-    //     nav: true,
-    //     dots: false,
-    //     center : false ,
-    //     autoplaySpeed : 5000,
-    //     autoplayTimeout : 5000,
-    //     smartSpeed: 5000 ,
-    //     navText: ["<i class='icofont-thin-right'></i>", "<i class='icofont-thin-left'></i>"],
-    //     responsive: {
-    //         0: {
-    //             items: 1
-    //         },
-    //         600: {
-    //             items: 3
-    //         },
-    //         1000: {
-    //             items: 4
-    //         }
-    //     }
-    // });
+    $('.filedInput').focusout(function(){
+        if($(this).val() === "") $(this).parent('.field').removeClass('focused');
+    });
 
-
-    // // Upload File 
-    // $('.uploadFile').on('change', function(e) {
-    //     let fileName = e.target.value.split( '\\' ).pop();
-    //     console.log(fileName);
-    //     let files = $(this).parent('.uploadBox').prev('.uploadedFiles');
-    //     files.append(
-    //         '<div class="file">' +
-    //             '<h3 class="fileName">' + fileName  + '</h3>' +
-    //             '<span class="deleteFile"> <i class="icofont-ui-delete"></i> </span>' +
-    //         '</div>'
-    //     );               
-    // });
-
-    // // Delete File
-    // $(document).on('click','.deleteFile' , function(){
-    //     $(this).parent('.file').remove();
-    // });
-
-    // iniat WOW Js
-    new WOW().init();
+    $('button[type="reset"]').on('click' , function(){
+        $('.field').removeClass('focused');
+    });
    
 })(jQuery);
 

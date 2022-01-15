@@ -22,6 +22,7 @@
     --grey: #F7F9FC;
     --blue: #0078D2;
     --blue-dark: #0657a9;
+    --orange: #853c02;
 }
 
 
@@ -170,7 +171,7 @@ textarea:active {
 }
 
 .openSearch:hover {
-    color: #853c02;
+    color: var(--orange);
 }
 
 .mobileHeader {
@@ -716,16 +717,16 @@ textarea:active {
         font-size: 25px;
         margin-bottom: 15px;
     }
-    
+
     .articleContent p {
         font-size: 17px;
         margin-bottom: 30px;
     }
-    
+
     .article {
         padding: 40px 0;
     }
-    
+
     .bookingBtn {
         font-size: 14px;
         width: 110px;
@@ -816,32 +817,32 @@ textarea:active {
     .appsVector img {
         max-height: 210px;
     }
-    
+
     .appsContent {
         padding: 20px 0;
     }
-    
+
     .apps h2 {
         font-size: 20px;
         margin-bottom: 10px;
     }
-    
+
     .apps p {
         font-size: 14px;
     }
-    
+
     .downloads {
         margin: 0;
     }
-    
+
     .download {
         padding: 7px 10px;
     }
-    
+
     .download h6 {
         font-size: 12px;
     }
-    
+
     .download .icon {
         display: flex;
         align-items: center;
@@ -1085,7 +1086,7 @@ textarea:active {
 }
 
 .pageHeaderTitle {
-    background: rgba(0,0,0,.7);
+    background: rgba(0, 0, 0, .7);
     position: absolute;
     top: 0;
     left: 0;
@@ -1142,11 +1143,11 @@ textarea:active {
     .pageHeaderTitle h1 {
         font-size: 23px;
     }
-    
+
     .servicContent h2 {
         font-size: 23px;
     }
-    
+
     .servicContent p {
         font-size: 17px;
         line-height: 30px;
@@ -1275,22 +1276,22 @@ textarea:active {
     .package {
         margin-bottom: 20px;
     }
-    
+
     .package .pic {
         height: 140px;
     }
-    
+
     .package .data {
         padding: 15px;
     }
-    
+
     .package h2 {
         font-size: 18px;
         font-weight: 800;
         line-height: 30px;
         height: 55px;
     }
-    
+
     .package h5 {
         font-size: 14px;
     }
@@ -1324,7 +1325,7 @@ textarea:active {
     .preperation h2 {
         font-size: 18px;
     }
-    
+
     .preperation ul {
         font-size: 14px;
         line-height: 28px;
@@ -1417,6 +1418,8 @@ textarea:active {
 }
 
 .supBox img {
+    max-height: 200px;
+    width: 100%;
     border-radius: 15px 15px 0 0;
 }
 
@@ -1476,6 +1479,11 @@ textarea:active {
     background: var(--primaryColor);
 }
 
+.certificatesContent {
+    max-width: 500px;
+    margin: auto;
+}
+
 .certificate {
     width: 100px;
     text-align: center;
@@ -1488,63 +1496,606 @@ textarea:active {
     border-radius: 15px;
     overflow: hidden;
     margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.advantagesList {
+    font-size: 23px;
+    line-height: 40px;
+    text-align: initial;
+}
+
+.advantagesList ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.advantagesList li {
+    width: 50%;
+}
+
+@media screen and (max-width:425px) {
+    .advantagesList li {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .supportHeader {
+        margin-bottom: 15px;
+    }
+
+    .supportHeader h2 {
+        font-size: 17px;
+    }
+
+    .supportHeader p {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .supportSlider p {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .supportPost h3 {
+        font-size: 14px;
+    }
+
+    .supBox {
+        margin-bottom: 20px;
+        height: auto;
+    }
+
+    .supBox h4 {
+        font-size: 14px;
+    }
+
+    .waterSlider {
+        height: 300px;
+    }
+
+    .waterSlider ul {
+        font-size: 15px;
+        line-height: 30px;
+    }
+
+    .labVideo iframe {
+        height: 350px;
+    }
+
+    .advantagesList {
+        font-size: 15px;
+        line-height: 30px;
+    }
+}
+
+/*==========================||---------------------------||========================*/
+/*==========================||          More Page        ||========================*/
+/*==========================||---------------------------||========================*/
+
+.description img {
+    margin: auto;
+    display: block;
+}
+
+.description h3 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.9;
+}
+
+.features h2 {
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.feature {
+    color: var(--text);
+    background: var(--white);
+    cursor: pointer;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 5px 15px rgb(35 101 154 / 7%);
+    transition: all .5s ease-in-out;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px rgb(35 101 154 / 12%);
+}
+
+.feature .pic {
+    padding: 25px;
+    height: 185px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.feature img {
+    max-width: 100px;
+}
+
+.feature .data {
+    padding: 25px;
+}
+
+.feature h4 {
+    font-size: 17px;
+    line-height: 31px;
+    margin: 0;
+}
+
+.loginInfo h4 {
+    font-size: 20px;
+}
+
+.loginInfo a {
+    color: var(--primaryColor);
+    font-weight: 700;
+    margin: 0 5px;
+}
+
+.loginInfo span {
+    color: var(--primaryColor);
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.policy h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.policy ul {
+    list-style: disc;
+    list-style-position: initial;
+    padding-inline-start: 20px;
+    line-height: 30px;
+}
+
+.policy li {
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width:768px) {
+    .description h3 {
+        font-size: 14px;
+    }
+
+    .features h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .feature {
+        margin-bottom: 20px;
+    }
+
+    .feature .pic {
+        padding: 15px;
+        height: 120px;
+    }
+
+    .feature img {
+        max-width: 70px;
+    }
+
+    .feature .data {
+        padding: 15px;
+    }
+
+    .feature h4 {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .loginInfo h4 {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .loginInfo span {
+        font-size: 25px;
+    }
+
+    .policy h2 {
+        font-size: 18px;
+    }
+
+    .policy ul {
+        font-size: 14px;
+        line-height: 25px;
+    }
+}
+
+/*==========================||---------------------------||========================*/
+/*==========================||         Contact Page       ||========================*/
+/*==========================||---------------------------||========================*/
+
+.contactBox {
+    color: var(--text);
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+}
+
+.contactBox h3 {
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.field {
+    position: relative;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--text);
+    height: 45px;
+    transition: all .5s ease-in-out;
+}
+
+.textareaField {
+    height: 100px;
+}
+
+.field.focused {
+    border-color: var(--primaryColor);
+}
+
+.field label {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    margin-inline-start: 10px;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 40px;
+    transition: all .3s ease-in-out;
+}
+
+.field.focused label {
+    top: -23px;
+    margin-inline-start: 0;
+    font-size: 10px;
+}
+
+.field input {
+    border: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.field textarea {
+    border: 0;
+    resize: none;
+    height: 100%;
+    width: 100%;
+}
+
+.formBtns {
+    margin: 40px 0 0 0;
+}
+
+.formBtns button {
+    width: 120px;
+    height: 45px;
+    background: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+    box-shadow: none;
+    color: var(--white);
+    font-weight: 600;
+    border-radius: 5px;
+    margin-inline-end: 16px;
+    cursor: pointer;
+}
+
+.formBtns button:hover {
+    background: var(--orange);
+}
+
+.contactForm {
+    padding: 5%;
+}
+
+.contactSocial {
+    background: var(--primaryColor);
+    padding: 30px;
+    height: 100%;
+}
+
+.contactSocial li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contactSocial .icon {
+    width: 30px;
+}
+
+.contactSocial h5 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--blue-dark);
+}
+
+.contactSocial a {
+    font-size: 15px;
+    color: var(--white);
+}
+
+@media screen and (max-width:768px) {
+    .contactBox h3 {
+        font-size: 17px;
+    }
+
+    .formBtns {
+        margin-top: 20px;
+    }
+
+    .formBtns button {
+        width: 100px;
+        font-size: 14px;
+    }
+}
+
+/*==========================||---------------------------||========================*/
+/*==========================||           en Ltr          ||========================*/
+/*==========================||---------------------------||========================*/
+
+.en {
+    direction: ltr;
+    text-align: left;
 }
 
 @media screen and (max-width:768px) {}
 
 /*==========================||---------------------------||========================*/
-/*==========================||          About Page       ||========================*/
+/*==========================||           loader          ||========================*/
 /*==========================||---------------------------||========================*/
 
+.loader {
+    background-color: #E6E9EA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 12;
+}
 
-@media screen and (max-width:768px) {}
+.loaderWrapper {
+    width: 200px;
+}
 
-/*==========================||---------------------------||========================*/
-/*==========================||         Events Page       ||========================*/
-/*==========================||---------------------------||========================*/
+.loaderBox {
+    width: 80px;
+    height: 137px;
+    margin: 0 auto;
+    margin-top: 100px;
+    position: relative;
+    /* overflow: hidden; */
+}
 
+.loader svg {
+    width: 80px;
+    height: 190px;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
-@media screen and (max-width:768px) {}
+.loader .background {
+    width: 77px;
+    height: 30px;
+    background-color: #5BBCFC;
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 1px;
+    animation: liquid 3s ease-in-out infinite, liquid-color 80s infinite;
+}
 
-/*==========================||---------------------------||========================*/
-/*==========================||       Corporate Page      ||========================*/
-/*==========================||---------------------------||========================*/
+.bubble {
+    width: 20px;
+    height: 20px;
+    background: #5BBCFC;
+    border-radius: 10px;
+    position: absolute;
+    top: 120px;
+}
 
-@media screen and (max-width:768px) {}
+.loader p {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    width: 170px;
+    margin: 16px auto;
+    font-weight: 700;
+}
 
-/*==========================||---------------------------||========================*/
-/*==========================||       Wellness Ideas      ||========================*/
-/*==========================||---------------------------||========================*/
+@keyframes liquid {
+    0% {
+        height: 30px;
+    }
 
-@media screen and (max-width:768px) {}
+    50% {
+        height: 40px;
+    }
 
-/*==========================||---------------------------||========================*/
-/*==========================||          Careers          ||========================*/
-/*==========================||---------------------------||========================*/
+    100% {
+        height: 30px;
+    }
+}
 
-@media screen and (max-width:768px) {}
+@keyframes liquid-color {
+    from {
+        -webkit-filter: hue-rotate(-360deg);
+    }
 
-/*==========================||---------------------------||========================*/
-/*==========================||          Volunteer        ||========================*/
-/*==========================||---------------------------||========================*/
+    to {
+        -webkit-filter: hue-rotate(0deg);
+    }
+}
 
-@media screen and (max-width:768px) {}
+@keyframes bubble {
+    0% {
+        top: 60px;
+    }
 
-/*==========================||---------------------------||========================*/
-/*==========================||        Sponsorships       ||========================*/
-/*==========================||---------------------------||========================*/
+    100% {
+        top: -90px;
+        opacity: 0;
+    }
+}
 
-@media screen and (max-width:768px) {}
+@keyframes side {
+    0% {
+        margin-right: 0px;
+    }
 
-/*==========================||---------------------------||========================*/
-/*==========================||            AR             ||========================*/
-/*==========================||---------------------------||========================*/
+    100% {
+        margin-right: 35px;
+    }
+}
 
+.b1,
+.b2,
+.b3 {
+    right: 18px;
+    transform: scale(0.4);
+    opacity: 0.6;
+    animation: bubble 8s linear infinite, liquid-color 80s infinite, side 2s ease-in-out infinite alternate;
+}
 
-@media screen and (max-width:768px) {}
+.b2 {
+    right: 17px;
+    transform: scale(0.5);
+    animation-delay: 2s, 0s, 2s;
+}
 
-/*==========================||---------------------------||========================*/
-/*==========================||            Loader        ||========================*/
-/*==========================||---------------------------||========================*/
+.b3 {
+    right: 26px;
+    animation-delay: 5s, 0s, 5s;
+    animation: bubble 10s linear infinite, liquid-color 80s infinite, side 3s ease-in-out infinite alternate;
+}
 
-@media screen and (max-width:768px) {}
+.b4,
+.b5 {
+    right: 17px;
+    transform: scale(0.5);
+    opacity: 0.8;
+    animation: bubble 16s linear infinite, liquid-color 80s infinite, side 5s ease-in-out infinite alternate;
+    animation-delay: 4s, 0s, 4s;
+}
+
+.b5 {
+    right: 16px;
+    animation-delay: 5s, 0s, 5s;
+}
+
+.b6,
+.b7,
+.b8 {
+    right: 17px;
+    transform: scale(0.6);
+    opacity: 0.4;
+    animation: bubble 14s linear infinite, liquid-color 80s infinite, side 3s ease-in-out infinite alternate;
+    animation-delay: 9s, 0s, 9s;
+}
+
+.b7 {
+    right: 14px;
+    transform: scale(0.7);
+    animation-delay: 3s, 0s, 3s;
+}
+
+.b8 {
+    right: 17px;
+    animation-delay: 7s, 0s, 7s;
+}
+
+.b9,
+.b0 {
+    right: 19px;
+    transform: scale(0.65);
+    opacity: 0.7;
+    animation: bubble 20s linear infinite, liquid-color 80s infinite, side 5s ease-in-out infinite alternate;
+}
+
+.b0 {
+    right: 18px;
+    animation-delay: 13s, 0s, 13s;
+}
+
+.swirl {
+    width: 10px;
+    height: 10px;
+    background: #5BBCFC;
+    border-radius: 10px;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+}
+
+@keyframes swirl {
+    0% {
+        top: 80px;
+    }
+
+    100% {
+        top: 90px;
+    }
+}
+
+.s0 {
+    animation: liquid-color 80s infinite, swirl 1s ease-in-out infinite alternate;
+}
+
+.s1 {
+    left: 40px;
+    transform: scale(1.2);
+    animation: liquid-color 80s infinite, swirl 2s ease-in-out infinite alternate;
+    animation-delay: 0s, 2s;
+}
+
+.s2 {
+    left: 40px;
+    transform: scale(0.8);
+    animation: liquid-color 80s infinite, swirl 2s ease-in-out infinite alternate;
+    animation-delay: 0s, 3s;
+}
+
+.s3 {
+    left: 50px;
+    transform: scale(1.4);
+    animation: liquid-color 80s infinite, swirl 1s ease-in-out infinite alternate;
+    animation-delay: 0s, 5s;
+}
+
+.s4 {
+    left: 60px;
+    animation: liquid-color 80s infinite, swirl 2s ease-in-out infinite alternate;
+    animation-delay: 0s, 3s;
+}
+
+.s5 {
+    left: 30px;
+    transform: scale(0.8);
+    animation: liquid-color 80s infinite, swirl 1s ease-in-out infinite alternate;
+    animation-delay: 0s, 2s;
+}
+
